@@ -1,0 +1,15 @@
+newmtl Bark
+Ka 0.392157 0.392157 0.392157
+Kd 1 1 1
+Ks 0 0 0
+illum 2
+Ns 2048
+map_Kd AL04brk.jpg
+
+newmtl Leaf
+Ka 0.392157 0.392157 0.392157
+Kd 1 1 1
+Ks 0 0 0
+illum 2
+Ns 2048
+map_Kd AL04aut.jpg

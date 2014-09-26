@@ -1,0 +1,31 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+newmtl wood
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl metal_gold_001
+Ka  0.0 0.0 0.0
+Kd  0.9 0.5 0.1
+Ks  0.8 0.8 0.6
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__115 (1) to come 
+#
+newmtl wood
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__115 done 
+#
+# EOF

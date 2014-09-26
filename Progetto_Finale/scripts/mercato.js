@@ -1,0 +1,15 @@
+var asfalto = THREE.ImageUtils.loadTexture('assets/textures/asfalto.jpg');
+asfalto.wrapS = THREE.RepeatWrapping;
+asfalto.wrapT = THREE.RepeatWrapping;
+var piattaformaGeometry = new THREE.CubeGeometry(80,25,1);
+var piattaformaMaterial = new THREE.MeshLambertMaterial({map: asfalto});
+var piattafoma = new THREE.Mesh(piattaformaGeometry, piattaformaMaterial);
+piattafoma.material.map.wrapS = THREE.RepeatWrapping;
+piattafoma.material.map.wrapT = THREE.RepeatWrapping;
+piattafoma.material.map.repeat.set(15,2);
+piattafoma.rotation.x = -Math.PI/2;
+piattafoma.position.z = 37;
+scene.add(piattafoma);
+b = piattafoma.clone();
+b.position.z = -8;
+scene.add(b);
