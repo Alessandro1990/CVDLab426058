@@ -8,7 +8,7 @@ var mode = 9;
 var objects = [];
 var ray;
 var havePointerLock = 'pointerLockElement' in document || 'mozPointerLockElement' in document || 'webkitPointerLockElement' in document;
-
+THREE.ImageUtils.crossOrigin = "anonymous";
 scene = new THREE.Scene();
 scene.fog = new THREE.FogExp2( 0xcccccc, 0.002 );
 
