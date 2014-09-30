@@ -352,26 +352,3 @@
       pianoTerra.position.set(7.65,1.5,0.6);
       scene.add(pianoTerra);
 
-
-      // Letto
-        tessuto = THREE.ImageUtils.loadTexture('assets/textures/tessuto.jpg');
-        tessuto.wrapS = THREE.RepeatWrapping;
-        tessuto.wrapT = THREE.RepeatWrapping;
-
-        loader.load('assets/models/letto.obj', function (obj) {
-        var material = new THREE.MeshLambertMaterial({map: tessuto, shading: THREE.FlatShading, side: THREE.DoubleSide});
-        obj.scale.set(.0005,.0005,.0005);
-        obj.position.set(10.5,25,6.5);
-        obj.rotation.y = -Math.PI/4
-        obj.position.set(.6,15.2,-4.6);
-
-        //scene.add(obj);
-        obj.traverse(function (child) {
-          if (child instanceof THREE.Mesh) {
-            child.material = material;
-            child.material.map.wrapS = THREE.RepeatWrapping;
-            child.material.map.wrapT = THREE.RepeatWrapping;
-            child.material.map.repeat.set(3,3);
-          }
-        });
-      });

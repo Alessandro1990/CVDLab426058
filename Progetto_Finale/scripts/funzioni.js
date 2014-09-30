@@ -8,15 +8,12 @@ var mode = 9;
 var objects = [];
 var ray;
 var havePointerLock = 'pointerLockElement' in document || 'mozPointerLockElement' in document || 'webkitPointerLockElement' in document;
-THREE.ImageUtils.crossOrigin = "anonymous";
 scene = new THREE.Scene();
 scene.fog = new THREE.FogExp2( 0xcccccc, 0.002 );
 
 camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 1000 );
 camera.position.set(0,30,120);
 camera.lookAt(new THREE.Vector3(0,0,0));
-
-var step = 0;
 
 renderer = new THREE.WebGLRenderer( { antialias: false } );
 renderer.setClearColor(scene.fog.color, 1);
@@ -151,7 +148,6 @@ function initStats() {
             console.log(intersects.length);
             if (intersects.length > 0) {
               console.log("INTERSECT!");
-              console.log("Clicked an animated object.");
               intersects[0].object.anim() && intersects[0].object.anim;
             }
           }

@@ -13,3 +13,33 @@ scene.add(piattafoma);
 b = piattafoma.clone();
 b.position.z = -8;
 scene.add(b);
+
+// Albero
+loaderMTL = new THREE.OBJMTLLoader();
+      loaderMTL.addEventListener('load', function (event) {
+        var object = event.content;
+        object.scale.set(0.5,0.5,0.5);
+        object.position.set(-10,0,0);
+        scene.add(object);
+
+      });
+      loaderMTL.load(
+        'assets/models/blackTupelo.obj', 
+        'assets/models/blackTupelo.mtl', 
+        {side: THREE.DoubleSide}
+      );
+
+// Lampione
+loaderMTL = new THREE.OBJMTLLoader();
+      loaderMTL.addEventListener('load', function (event) {
+        var object = event.content;
+        object.scale.set(2,2,2);
+        object.position.set(22,0,0);
+        scene.add(object);
+
+      });
+      loaderMTL.load(
+        'assets/models/farola1.obj', 
+        'assets/models/farola1.mtl', 
+        {side: THREE.DoubleSide}
+      );

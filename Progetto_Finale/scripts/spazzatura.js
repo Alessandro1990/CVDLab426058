@@ -18,21 +18,20 @@
       });
 
 var batmobile;
-
 // MACCHINA
 loaderMTL = new THREE.OBJMTLLoader();
       loaderMTL.addEventListener('load', function (event) {
         var object = event.content;
-        object.scale.set(0.5,0.5,0.5);
-        object.rotation.y = Math.PI/2;
+        object.scale.set(0.3,0.3,0.3);
+        object.rotation.y = -Math.PI/2;
         object.position.set(20,1.2,20);
         batmobile = object;
         scene.add(batmobile);
 
       });
       loaderMTL.load(
-        'assets/models/batmobile.obj', 
-        'assets/models/batmobile.mtl', 
+        'assets/models/VW-new-beetle.obj', 
+        'assets/models/VW-new-beetle.mtl', 
         {side: THREE.DoubleSide}
       );
 
